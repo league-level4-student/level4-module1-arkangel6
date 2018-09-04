@@ -1,6 +1,9 @@
 package _01_Custom_ArrayList;
 
 import static org.junit.Assert.*;
+
+import java.util.Arrays;
+
 import org.junit.jupiter.api.Test;
 
 //Complete the ArrayList class using the template to make the tests pass.
@@ -27,7 +30,10 @@ public class CustomArrayListTest {
 		list.add("TWO");
 		list.add("THREE");
 		
+		
 		list.set(2, "PICKLES");
+		
+		System.out.println(Arrays.toString(list.array));
 		
 		if(!list.get(0).equals("TESTER")) fail("list.get(0) returning improper value.");
 		if(!list.get(1).equals("ONE"))  fail("list.get(1) returning improper value.");
@@ -44,6 +50,8 @@ public class CustomArrayListTest {
 		list.add('O');
 		
 		list.insert(2, 'E');
+		
+		//System.out.println(Arrays.toString(list.array));
 		
 		if(list.get(0) != 'D') fail("list.get(0) returning improper value.");
 		if(list.get(1) != 'I') fail("list.get(1) returning improper value.");
